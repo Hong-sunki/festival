@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/festival/static/css/main.29fc1ff4.chunk.css",
+    "main.js": "/festival/static/js/main.b9bcc3d5.chunk.js",
+    "main.js.map": "/festival/static/js/main.b9bcc3d5.chunk.js.map",
+    "runtime-main.js": "/festival/static/js/runtime-main.5cccfb70.js",
+    "runtime-main.js.map": "/festival/static/js/runtime-main.5cccfb70.js.map",
+    "static/js/2.962f3ad6.chunk.js": "/festival/static/js/2.962f3ad6.chunk.js",
+    "static/js/2.962f3ad6.chunk.js.map": "/festival/static/js/2.962f3ad6.chunk.js.map",
+    "index.html": "/festival/index.html",
+    "static/css/main.29fc1ff4.chunk.css.map": "/festival/static/css/main.29fc1ff4.chunk.css.map",
+    "static/js/2.962f3ad6.chunk.js.LICENSE.txt": "/festival/static/js/2.962f3ad6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5cccfb70.js",
+    "static/js/2.962f3ad6.chunk.js",
+    "static/css/main.29fc1ff4.chunk.css",
+    "static/js/main.b9bcc3d5.chunk.js"
+  ]
+}
