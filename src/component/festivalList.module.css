@@ -1,0 +1,6 @@
+.list { width: 25%; text-align: center; cursor: pointer; margin-left: 2rem; margin-right: 2rem; margin-bottom: 5rem; box-shadow: 0 0 7px #999; }
+.fstvname { font-weight: bold; font-size: 1.3rem; margin: 1rem 0; }
+.img { height: 10rem; }
+.date { margin: 0.6rem 0; }
+.area { margin: 0.6rem 0; }
+.tel { margin-bottom: 0.6rem; }

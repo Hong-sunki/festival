@@ -1,0 +1,3 @@
+.wrap { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5rem; border-bottom: 1px solid #ddd; }
+.depth1 { display: flex; }
+.depth1Li { margin: 0 1rem; }
