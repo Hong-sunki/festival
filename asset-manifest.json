@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/festival/static/css/main.98b7811d.chunk.css",
-    "main.js": "/festival/static/js/main.3aa1489a.chunk.js",
-    "main.js.map": "/festival/static/js/main.3aa1489a.chunk.js.map",
+    "main.js": "/festival/static/js/main.e0cda20d.chunk.js",
+    "main.js.map": "/festival/static/js/main.e0cda20d.chunk.js.map",
     "runtime-main.js": "/festival/static/js/runtime-main.817f98c7.js",
     "runtime-main.js.map": "/festival/static/js/runtime-main.817f98c7.js.map",
-    "static/js/2.2f2aa2f0.chunk.js": "/festival/static/js/2.2f2aa2f0.chunk.js",
-    "static/js/2.2f2aa2f0.chunk.js.map": "/festival/static/js/2.2f2aa2f0.chunk.js.map",
+    "static/js/2.c4b53e40.chunk.js": "/festival/static/js/2.c4b53e40.chunk.js",
+    "static/js/2.c4b53e40.chunk.js.map": "/festival/static/js/2.c4b53e40.chunk.js.map",
     "index.html": "/festival/index.html",
     "static/css/main.98b7811d.chunk.css.map": "/festival/static/css/main.98b7811d.chunk.css.map",
-    "static/js/2.2f2aa2f0.chunk.js.LICENSE.txt": "/festival/static/js/2.2f2aa2f0.chunk.js.LICENSE.txt"
+    "static/js/2.c4b53e40.chunk.js.LICENSE.txt": "/festival/static/js/2.c4b53e40.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.817f98c7.js",
-    "static/js/2.2f2aa2f0.chunk.js",
+    "static/js/2.c4b53e40.chunk.js",
     "static/css/main.98b7811d.chunk.css",
-    "static/js/main.3aa1489a.chunk.js"
+    "static/js/main.e0cda20d.chunk.js"
   ]
 }
