@@ -1,73 +1,87 @@
-https://hong-sunki.github.io/festival/
+
+# 미스홍투어
+
+전국 축제 조회 서비스 메인 : https://hong-sunki.github.io/festival/
 
 
-# Getting Started with Create React App
+## 목차
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. 제작 기간 & 참여 인원
+2. 사용 기술
+3. 핵심 기능
+4. 트러블 슈팅
 
-## Available Scripts
 
-In the project directory, you can run:
+### 1. 제작기간 & 참여인원
++ 2021년 05월 01 ~ 2021년 05월 24일
++ 진하늘 (프론트엔드)
++ 홍선기 (프론트엔드)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+### 2. 사용기술
++ React
++ React-Router
++ Axios
++ PostCSS
++ WebPack
++ MomentJs (https://momentjs.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. 핵심 기능
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 3.1 계절별로 API를 요청하여 표시
+#### 3.2 지역별로 API를 요청하여 표시
+#### 3.3 월별로 API를 요청하여 표시
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 4. 핵심 트러블 슈팅
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 4.1 MIXED CONTENT 문제
+Mixed Content는 https, http 간 통신 규약이 매칭되지 않을 때 생기는 문제. 한국관광공사에서 제공해주는 API가 https를 제공하지 않아, API 요청시 거부가 되어 프록시서버를 만들어 서버에서 API데이터를 송신하는 방식으로 사용했습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://github.com/Rob--W/cors-anywhere
+https://festivalprojectapp.herokuapp.com
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+#### 4.2 onClick style문제
+기존의 있던 li들과 클릭된 li의 스타일 변화매칭에서 문제가 발생해서
+클릭받은 li를 지목하는 부분에서 문제가 발생하여 따로 component를 만들어서 상위 app에서 onClick시 함수로 실행시켜 
+변화된 값을 props로 전달받아 매칭시켰습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```javascript
+const AreaCode = ({areaValue, areaName, areaChange, area}) => {
+      return (
+         <li className={Number(area) === Number(areaValue) ? styles.active : styles.arealist} onClick={(e) => areaChange(e.target.value)} value={areaValue}>{areaName}</li>
+            )
+};
 
-### Making a Progressive Web App
+export default AreaCode;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### 4.3 API 개수 문제
+API를 받아오고 화면에 출력하는 부분에 있어서 map을 사용하였는데 API가 1개 또는 0개가 들어올때 map이 오류나는 현상이 생겨서
+받아온 API데이터의 length값을 추출해서 1개 또는 0개 일경우 map대신 다른 코드를 적용시킴
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+<ul className={addShow === 1 ? styles.ulListDown : styles.ulList}>
+                {  
+                                ftv 
+                                ? ftv.length > 1 
+                                ? ftv.map((item)=>
+                                  <FestivalCreate key={item.contentid} item={item} onClickDetail={onClickDetail} /> )
+                                : <FestivalCreate item={ftv} onClickDetail={onClickDetail} />
+                                : <p className={styles.none}><i className="far fa-calendar-times"></i> {mon}월에는 계획된 행사가없습니다.</p>
+                }
+</ul>
+```
