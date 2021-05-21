@@ -34,7 +34,7 @@
 ### 3. 핵심 기능
 
 #### 3.1 계절별로 API를 요청하여 표시
-![image] (https://user-images.githubusercontent.com/77268941/119074942-eba84b80-ba2a-11eb-85ec-8fa3135df420.png)
+![season](https://user-images.githubusercontent.com/77268941/119075237-6d987480-ba2b-11eb-858b-f2086181b911.png)
 #### 3.2 지역별, 월별로 API를 요청하여 표시
 ![image] (https://user-images.githubusercontent.com/77268941/119074736-848a9700-ba2a-11eb-8eee-070426d96f69.png)
 
