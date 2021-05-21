@@ -34,7 +34,7 @@
 ### 3. 핵심 기능
 
 #### 3.1 계절별로 API를 요청하여 표시
-![] (./readmeimg/season.png)
+![image] (https://user-images.githubusercontent.com/77268941/119074736-848a9700-ba2a-11eb-8eee-070426d96f69.png)
 #### 3.2 지역별로 API를 요청하여 표시
 #### 3.3 월별로 API를 요청하여 표시
 
